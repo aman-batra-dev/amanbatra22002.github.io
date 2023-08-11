@@ -58,7 +58,7 @@ body {
     border-radius: 4px;
   }
   
-  form button[type="submit"] {
+  form input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     border: none;
