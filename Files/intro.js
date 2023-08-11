@@ -16,21 +16,14 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 let Submit  = document.getElementById("form");
-Submit.onclick = submitForm;
 Submit.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // handle submit
-});
-
-async function submitForm()
-{
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
   try {
-    const docRef = await addDoc(collection(db, "complaints"), {
+    const docRef = addDoc(collection(db, "complaints"), {
       email: email,
       name: name,
       subject: subject,
@@ -45,5 +38,10 @@ async function submitForm()
   document.getElementById("email").value = "";
   document.getElementById("subject").value = "";
   document.getElementById("message").value = "";
+});
+
+async function submitForm()
+{
+  
 }
   
