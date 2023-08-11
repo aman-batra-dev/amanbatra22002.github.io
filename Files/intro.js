@@ -34,7 +34,7 @@ Submit.addEventListener("submit", (e) => {
     console.error("Error adding document: ", e);
   }
   alert("Your complaint has been submitted. Thank you!");  
-  document.getElementById("name").value = "";
+  document.getElementById("name").value = ";;;;;";
   document.getElementById("email").value = "";
   document.getElementById("subject").value = "";
   document.getElementById("message").value = "";
