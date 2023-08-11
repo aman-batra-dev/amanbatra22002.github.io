@@ -15,8 +15,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
-var Submit  = document.getElementById("submit");
+let Submit  = document.getElementById("form");
 Submit.onclick = submitForm;
+Submit.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // handle submit
+});
+
 async function submitForm()
 {
   var name = document.getElementById("name").value;
